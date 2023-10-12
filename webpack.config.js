@@ -10,7 +10,7 @@ module.exports = {
         app: ['./src/entry.js']
     },
     output: {
-        filename: env  !== 'production' ? '../dist/static/[name].js?[hash:6]':'./static/[name].js?[hash:6]',
+        filename: env  !== 'production' ? './dist/static/[name].js?[hash:6]':'./static/[name].js?[hash:6]',
         path: path.resolve(__dirname)
     },
     devServer: {
@@ -20,7 +20,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: env  !== 'production' ? '../dist/index.html' : './index.html',
+            filename: env  !== 'production' ? './dist/index.html' : './index.html',
             inject: 'head',
             minify: {
                 collapseWhitespace: true,
